@@ -1,0 +1,677 @@
+:root {
+    --text-color: #1a1c20;
+    --link-color: #4a76ee;
+    --background-color: #eeeff1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+}
+
+nav .left a {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span {
+    margin-left: 5px;
+}
+
+/* SECTION 1: Hero */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+
+.hero-section .text {
+    flex: 5;
+}
+
+.hero-section .text h2 {
+    font-size: 45px;
+}
+
+.hero-section .text .links {
+    margin-top: 25px;
+}
+
+.hero-section .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+
+.hero-section .text .links a:hover {
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.hero-section .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.hero-section .headshot img {
+    width: 70%;
+    height: auto;
+    border-radius: 50% 50%;
+    object-fit: cover;
+}
+
+/* SECTION 2: SKILLS */
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.skills-section .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    padding: 10px 20px;
+    margin: 7px;
+    border: 1.5px solid #d3d3d3;
+    border-radius: 5px;
+}
+
+.skills-section .cells .cell img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.skills-section .cells .cell span {
+    font-size: 16px;
+}
+
+
+/* Add this to styles.css for a modern contact section */
+.contact-section {
+    padding: 3rem 1rem;
+    background: #f8f9fa;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1 1 250px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-form {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contact-form button {
+    background: #0077b6;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ...existing code... */
+
+.projects-section {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: #222;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    width: 320px;
+    padding: 24px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.project-card h3 {
+    margin: 12px 0 8px 0;
+    font-size: 1.3rem;
+    color: #1a1a1a;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.project-card a {
+    color: #0072b1;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.project-card a:hover {
+    color: #005580;
+}
+
+/* ...existing code... */
+
+.resume-section {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.resume-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+    color: #222;
+}
+
+.resume-container p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.resume-btn {
+    display: inline-block;
+    background: #0072b1;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.resume-btn i {
+    margin-right: 8px;
+}
+
+.resume-btn:hover {
+    background: #005580;
+    color: #fff;
+}
+
+/* ...existing code... */
+
+/* Responsive */
+@media (max-width: 900px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+/* ...existing code... */
+
+.contact-form button:hover {
+    background: #023e8a;
+}
+
+@media (max-width: 850px) {
+
+    /* SECTION-1: HERO */
+    .hero-section .text h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 740px) {
+
+    /* SECTION-1: HERO */
+    .hero-section {
+        flex-direction: column-reverse;
+    }
+
+    .hero-section .headshot img {
+        width: 100px;
+    }
+
+    /* SECTION 3: Testimony  */
+    .testimony-section {
+        text-align: center;
+    }
+
+    .testimony-section .group {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .right a {
+        font-size: 22px;
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+
+
+    nav .right a span {
+        display: none;
+    }
+
+    /* SECTION-1: HERO */
+    .hero-section {
+        padding: 0 20px;
+    }
+
+    .hero-section .text h2 {
+        font-size: 30px;
+    }
+
+    /* SECTION 2: SKILLS */
+    .skills-section {
+        padding: 0 20px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size: 14px;
+    }
+}
+
+/* ...existing code... */
+
+/* Navbar Hover Effects */
+nav {
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: box-shadow 0.3s;
+}
+
+nav .right a {
+    margin-left: 24px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+
+nav .right a:hover {
+    color: #0072b1;
+    background: #f0f8ff;
+    transform: translateY(-2px) scale(1.07);
+    box-shadow: 0 2px 8px rgba(0, 114, 177, 0.08);
+}
+
+/* Section Fade-in Animation */
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.2s;
+    margin-bottom: 40px;
+}
+
+section:nth-of-type(2) {
+    animation-delay: 0.3s;
+}
+
+section:nth-of-type(3) {
+    animation-delay: 0.4s;
+}
+
+section:nth-of-type(4) {
+    animation-delay: 0.5s;
+}
+
+section:nth-of-type(5) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Button Hover Effects */
+a.resume-btn,
+.contact-form button {
+    background: linear-gradient(90deg, #0072b1 60%, #00c6ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 114, 177, 0.08);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+a.resume-btn:hover,
+.contact-form button:hover {
+    background: linear-gradient(90deg, #005580 60%, #0072b1 100%);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 114, 177, 0.13);
+}
+
+/* Project Card Hover Effects */
+.project-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    width: 320px;
+    padding: 24px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.25s, box-shadow 0.25s, border 0.2s;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.04) rotate(-1deg);
+    box-shadow: 0 8px 32px rgba(0, 114, 177, 0.18);
+    border: 2px solid #0072b1;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.project-card:hover img {
+    filter: brightness(0.95) saturate(1.2);
+    transform: scale(1.04) rotate(1deg);
+}
+
+.project-card a {
+    color: #0072b1;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.project-card a:hover {
+    color: #005580;
+    text-decoration: underline;
+}
+
+/* Skills Cell Hover */
+.cells .cell {
+    background: #f5f7fa;
+    border-radius: 10px;
+    padding: 18px 12px;
+    margin: 8px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.cells .cell:hover {
+    background: #e6f7ff;
+    transform: translateY(-4px) scale(1.07) rotate(-2deg);
+    box-shadow: 0 6px 18px rgba(0, 114, 177, 0.12);
+}
+
+.cells .cell img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+    transition: transform 0.2s;
+}
+
+.cells .cell:hover img {
+    transform: scale(1.15) rotate(8deg);
+}
+
+/* Contact Form Focus & Hover */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 2px solid #0072b1;
+    outline: none;
+    background: #f0f8ff;
+    transition: border 0.2s, background 0.2s;
+}
+
+.contact-form button:active {
+    transform: scale(0.97);
+}
+
+/* Link underline animation */
+a:not(.resume-btn):not(.project-card a) {
+    position: relative;
+    overflow: hidden;
+}
+
+a:not(.resume-btn):not(.project-card a)::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #0072b1;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+a:not(.resume-btn):not(.project-card a):hover::after {
+    width: 100%;
+}
+
+
+.projects-section {
+    background: linear-gradient(120deg, #f9f9f9 60%, #e3f2fd 100%);
+}
+
+.resume-section {
+    background: linear-gradient(120deg, #fff 60%, #f1f8e9 100%);
+}
+
+.skills-section {
+    background: linear-gradient(120deg, #f5f7fa 60%, #e0f7fa 100%);
+}
+
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background: #0072b1;
+    color: white;
+    cursor: pointer;
+    padding: 14px 18px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 114, 177, 0.18);
+    transition: background 0.2s, transform 0.2s;
+}
+
+#scrollTopBtn:hover {
+    background: #005580;
+    transform: scale(1.1);
+}
+
+/* ...existing code... */
+body {
+    background-color: #eeeff1;
+    background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="40" x2="40" y2="0" stroke="rgba(74,118,238,0.07)" stroke-width="2"/><line x1="0" y1="0" x2="40" y2="40" stroke="rgba(74,118,238,0.07)" stroke-width="2"/></svg>');
+    background-repeat: repeat;
+    background-size: 40px 40px;
+}
+
+/* ...existing code... */
