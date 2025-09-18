@@ -663,3 +663,55 @@ nav .right a:hover {
         font-size: 14px;
     }
 }
+
+@media (max-width: 600px) {
+    nav {
+        padding: 0 10px;
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-section,
+    .skills-section,
+    .projects-section,
+    .certificates-section,
+    .resume-section,
+    .contact-section {
+        padding: 0 10px;
+        margin-bottom: 40px;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        gap: 20px;
+        margin: 30px 0 40px 0;
+    }
+
+    .skills-section .cells {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .projects-container,
+    .certificates-container,
+    .contact-container {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    .project-card,
+    .certificate-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .resume-container {
+        padding: 0;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+}
